@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+:root {
+  --bg-black-900: #f2f2fc;
+  --bg-black-100: #fdf9ff;
+  --bg-black-50: #e8dfec;
+  --bg-h: #224263;
+  --text-black-900: #302e4d;
+  --text-black-700: #504e70;
+  --text-nav: #ffee00;
+  --text-nav-hover: #fdf9ff;
+  --text-logo: #fdf9ff;
+  --skin-color: #1854b4;
+}
+
+body {
+  background-color: white;
+}
+
+.padd-15 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+}
+
+.elemen {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 35px;
+  color: white;
+  border-radius: 20px;
+  display: inline-block;
+  white-space: nowrap;
+  border: none;
+  background: var(--skin-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgb(0, 141, 44);
+}
+
+.section {
+  min-height: 70vh;
+  display: block;
+  padding: 0 20px;
+  opacity: 1;
+  position: relative;
+  left: 0;
+  top:120px;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+  animation: fadeInUp;
+  animation-duration: 3s;
+}
+
+/* Service */
+.service .service-item {
+  margin-bottom: 30px;
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+}
+.service .service-item .service-item-inner {
+  background-color: var(--bg-black-900);
+  border: 1px solid var(--bg-black-50);
+  border-radius: 10px;
+  padding: 50px 50px;
+  text-align: center;
+  transition: all 0.35 ease;
+}
+.service .service-item .service-item-inner:hover {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+.service .service-item .service-item-inner .icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.service .service-item .service-item-inner .icon .fa {
+  font-size: 40px;
+  line-height: 60px;
+  color: var(--skin-color);
+  transition: all 0.3s ease;
+}
+.service .service-item .service-item-inner:hover .icon {
+  background-color: var(--skin-color);
+}
+.service .service-item .service-item-inner:hover .icon .fa {
+  font-size: 25px;
+  color: #ffff;
+}
+.service .service-item .service-item-inner h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: var(--text-black-900);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.service .service-item .service-item-inner p {
+  font-size: 16px;
+  color: var(--text-black-700);
+  line-height: 25px;
+}
+
+.banner{
+  background-image: url(bekicot.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  border: 1px solid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  animation: slideInLeft;
+  animation-duration: 2s;
+  
+}
+
+.banner:after{
+  content: " ";
+  display: block;
+  position: absolute;
+  background-color: rgba(74, 74, 74, 0.6);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.banner .judul{
+  z-index: 1;
+  font-weight: bold;
+  padding: 30px 30px;
+  margin:  0 0 100px 120px;
+  animation: slideInLeft;
+  animation-duration: 2s;
+}
+
+.banner .judul .welcome-text{
+  z-index: 2;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.judul > .welcome-text{
+  animation: one 4s ease-in-out infinite;
+}
+@keyframes one{
+  0%, 100%{
+      color: #000000;
+      text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+  }
+  10%, 90%{
+      color: #ffffff;
+      text-shadow: none;
+  }
+}
+.judul > .welcome-text:nth-child(2){
+  animation-delay: .2s ;
+}
+.judul > .welcome-text:nth-child(3){
+  animation-delay: .4s ;
+}
+.judul > .welcome-text:nth-child(4){
+  animation-delay: .6s;
+}
+.judul > .welcome-text:nth-child(5){
+  animation-delay: .8s;
+}
+.judul > .welcome-text:nth-child(6){
+  animation-delay: .8s;
+}
+.judul > .welcome-text:nth-child(7){
+  animation-delay: 1s;
+}
+
+.logo > .brand-text{
+  animation: glow 4s ease-in-out infinite;
+}
+@keyframes glow{
+  0%, 100%{
+      color: #ffffff;
+      text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+  }
+  10%, 90%{
+      color: #009dffae;
+      text-shadow: none;
+  }
+}
+.logo > .brand-text:nth-child(2){
+  animation-delay: .2s ;
+}
+.logo > .brand-text:nth-child(3){
+  animation-delay: .4s ;
+}
+.logo > .brand-text:nth-child(4){
+  animation-delay: .6s;
+}
+
+
+.banner .judul p{
+  z-index: 3;
+  color: rgb(255, 255, 255);
+  margin: 20px 0 0 0;
+  font-weight: 300;
+  padding: 0 700px 0 0;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.banner .judul .btn{
+  margin: 40px 0 0 0;
+}
+
+.news .informasi{
+  padding: 0 20px;
+  text-align: center;
+  color: black;
+  margin: 0 252px 100px 252px;
+  padding: 0 70px 45px 70px;
+  border: 1px solid;
+  animation: fadeInUp;
+  animation-duration: 4s;
+  background-color: rgba(229, 229, 229, 0.781)
+}
+
+.news .informasi h2{
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 30px 0 30px 0;
+}
+
+.news .informasi .mitsuki{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-shadow: 0px 3px 10px 3px rgba(128, 127, 127, 0.6);
+  background-color: lightblue;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 35px 45px 35px 45px;
+}
+
+.kontak .telpon{
+  text-align: center;
+  margin: 0 0 100px 0;
+}
+
+.telpon .wa .contact{
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.telpon .wa .hp{
+  margin: 0 0 10px 0;
+}
+
+/* Footer */
+footer .bawah .footer-container{
+  border: 1px solid;
+  padding: 15px 0 0 0;
+  margin: 0 0 5px 0;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.bawah .footer-container .logo-container{
+  position: relative;
+  border: 1px solid;
+  padding: 30px 30px 30px 30px;
+  text-align: center;
+}
+
+.footer-container .follow .h1{
+  font-weight: bold;
+  color: black;
+  border: 1px solid;
+}
+
+.follow h1{
+  margin-bottom: 15px;
+}
+
+.logo-container a i{
+  border: 1px solid;
+  margin: 0 20px 0 20px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 50px;
+  color: white;
+}
+
+.logo-container a i:hover{
+  color: black;
+  background-color: white;
+}
+
+.perusahaan{
+  text-align: center;
+}
+
+
+
